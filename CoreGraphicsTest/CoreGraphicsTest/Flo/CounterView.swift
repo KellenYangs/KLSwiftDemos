@@ -14,6 +14,7 @@ let π: CGFloat = CGFloat(M_PI)
 @IBDesignable
 class CounterView: UIView {
     
+    /// 当前计数
     @IBInspectable var counter: Int = 5 {
         didSet {
             if counter <= NoOfGlasses && counter >= 0 {
@@ -25,9 +26,7 @@ class CounterView: UIView {
     @IBInspectable var counterColor: UIColor = UIColor.orangeColor()
     
     override func drawRect(rect: CGRect) {
-        
-        
-        // 1
+        // 1. 外轮廓
         let center: CGPoint = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
         let radius: CGFloat = max(bounds.width, bounds.height) / 2
         
@@ -42,7 +41,7 @@ class CounterView: UIView {
         counterColor.setStroke()
         path.stroke()
         
-        // 2
+        // 2. 当前计数轮廓
         let angleDifference: CGFloat = 2 * π - startAngle + endAngle
         let arcLengthPerGlass = angleDifference / CGFloat(NoOfGlasses)
         let outlineEndAngle = arcLengthPerGlass * CGFloat(counter) + startAngle
@@ -55,6 +54,32 @@ class CounterView: UIView {
         outlinePath.lineWidth = 5.0
         outlinePath.stroke()
         
+        // 3.小指标
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSaveGState(context)
+        outlineColor.setFill()
+        
+        let markerWidth: CGFloat = 5.0
+        let markerSize: CGFloat = 10.0
+        
+        let markerPath = UIBezierPath(rect: CGRect(x: -markerWidth/2, y: 0, width: markerWidth, height: markerSize))
+        
+        CGContextTranslateCTM(context, rect.width/2, rect.height/2)
+        
+        for i in 1...NoOfGlasses {
+            CGContextSaveGState(context)
+            
+            let angle = arcLengthPerGlass * CGFloat(i) + startAngle - π/2
+            
+            CGContextRotateCTM(context, angle)
+            CGContextTranslateCTM(context, 0, rect.height/2 - markerSize)
+            
+            markerPath.fill()
+            
+            CGContextRestoreGState(context)
+        }
+        
+        CGContextRestoreGState(context)
     }
 
 }
