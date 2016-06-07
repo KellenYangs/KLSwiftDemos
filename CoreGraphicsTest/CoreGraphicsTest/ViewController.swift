@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+    @IBOutlet weak var medalView: MedalView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var counterView: CounterView!
     @IBOutlet weak var counterLabel: UILabel!
@@ -21,10 +21,19 @@ class ViewController: UIViewController {
     
     var isGraphViewShowing: Bool = false
     
+    func checkTotal() {
+        if counterView.counter >= 8 {
+            medalView.showMedal(true)
+        } else {
+            medalView.showMedal(false)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         counterLabel.text = "\(counterView.counter)"
+        checkTotal()
     }
 
     @IBAction func btnPushButton(sender: PushButtonView) {
@@ -38,7 +47,7 @@ class ViewController: UIViewController {
             }
         }
         counterLabel.text = "\(counterView.counter)"
-        
+        checkTotal()
     }
 
     @IBAction func containerViewTap(sender: UITapGestureRecognizer) {

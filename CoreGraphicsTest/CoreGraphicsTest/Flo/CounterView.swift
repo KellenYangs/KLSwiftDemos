@@ -64,6 +64,7 @@ class CounterView: UIView {
         
         let markerPath = UIBezierPath(rect: CGRect(x: -markerWidth/2, y: 0, width: markerWidth, height: markerSize))
         
+        // 移动
         CGContextTranslateCTM(context, rect.width/2, rect.height/2)
         
         for i in 1...NoOfGlasses {

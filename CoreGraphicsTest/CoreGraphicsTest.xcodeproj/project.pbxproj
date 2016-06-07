@@ -18,6 +18,7 @@
 		6B0C0AAD1CF6FD4300324E40 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C0AAC1CF6FD4300324E40 /* GraphView.swift */; };
 		6B28FD9A1CF84078009E471A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B28FD991CF84078009E471A /* BackgroundView.swift */; };
 		6B28FD9D1CF84459009E471A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B28FD9C1CF84459009E471A /* TestView.swift */; };
+		6BEFB0FA1CFBDB0E004E806F /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEFB0F91CFBDB0E004E806F /* MedalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6B28FD991CF84078009E471A /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		6B28FD9B1CF84447009E471A /* MedalDrawing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MedalDrawing.playground; sourceTree = "<group>"; };
 		6B28FD9C1CF84459009E471A /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		6BEFB0F91CFBDB0E004E806F /* MedalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				6B0C0AAA1CF6EEE800324E40 /* CounterView.swift */,
 				6B0C0AAC1CF6FD4300324E40 /* GraphView.swift */,
 				6B28FD991CF84078009E471A /* BackgroundView.swift */,
+				6BEFB0F91CFBDB0E004E806F /* MedalView.swift */,
 			);
 			path = Flo;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BEFB0FA1CFBDB0E004E806F /* MedalView.swift in Sources */,
 				6B28FD9D1CF84459009E471A /* TestView.swift in Sources */,
 				6B28FD9A1CF84078009E471A /* BackgroundView.swift in Sources */,
 				6B0C0AAD1CF6FD4300324E40 /* GraphView.swift in Sources */,

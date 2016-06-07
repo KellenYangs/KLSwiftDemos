@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="J3k-ty-v9j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -166,10 +166,19 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DQx-Bp-OYe" customClass="MedalView" customModule="CoreGraphicsTest" customModuleProvider="target">
+                                                <rect key="frame" x="80" y="147" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="7vd-5N-Xkj"/>
+                                                    <constraint firstAttribute="height" constant="80" id="DaK-fe-zWz"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="DQx-Bp-OYe" firstAttribute="centerX" secondItem="HSS-xp-hEo" secondAttribute="centerX" id="4if-KR-PUd"/>
                                             <constraint firstItem="Pho-4b-mh4" firstAttribute="width" secondItem="HSS-xp-hEo" secondAttribute="width" multiplier="1:3" constant="-30" id="REY-Gw-Llb"/>
+                                            <constraint firstItem="DQx-Bp-OYe" firstAttribute="top" secondItem="Pho-4b-mh4" secondAttribute="bottom" constant="2" id="h98-Df-8h6"/>
                                             <constraint firstItem="Pho-4b-mh4" firstAttribute="centerY" secondItem="HSS-xp-hEo" secondAttribute="centerY" id="li9-WY-P4W"/>
                                             <constraint firstAttribute="width" secondItem="HSS-xp-hEo" secondAttribute="height" multiplier="1:1" id="qd1-sV-kC4"/>
                                             <constraint firstItem="Pho-4b-mh4" firstAttribute="centerX" secondItem="HSS-xp-hEo" secondAttribute="centerX" id="xmj-8R-Ppx"/>
@@ -262,8 +271,8 @@
                             <constraint firstItem="lTW-Lq-0gM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="HNP-hk-iwg"/>
                             <constraint firstItem="Ct6-G6-x98" firstAttribute="centerY" secondItem="7D0-n9-fWf" secondAttribute="centerY" id="K4H-hE-Wmx"/>
                             <constraint firstItem="Ct6-G6-x98" firstAttribute="height" secondItem="xpD-es-btl" secondAttribute="height" id="KCi-7V-SKN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7D0-n9-fWf" secondAttribute="bottom" constant="50" id="Kpi-vJ-7q7"/>
                             <constraint firstItem="xpD-es-btl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SUM-S4-mi5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7D0-n9-fWf" secondAttribute="bottom" constant="50" id="XX1-Xx-liR"/>
                             <constraint firstItem="lTW-Lq-0gM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="Ypa-c2-207"/>
                             <constraint firstItem="yiD-PU-hbe" firstAttribute="width" secondItem="7D0-n9-fWf" secondAttribute="width" id="dPU-yM-2uj"/>
                             <constraint firstItem="Ct6-G6-x98" firstAttribute="width" secondItem="xpD-es-btl" secondAttribute="width" id="dxl-Bp-Ji1"/>
@@ -290,6 +299,7 @@
                         <outlet property="counterView" destination="HSS-xp-hEo" id="6GZ-bJ-umf"/>
                         <outlet property="graphView" destination="epj-Vw-FSi" id="yQk-Ub-m0I"/>
                         <outlet property="maxLabel" destination="bR7-OD-vIT" id="xjD-rh-J1x"/>
+                        <outlet property="medalView" destination="DQx-Bp-OYe" id="du4-ja-Rec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -299,7 +309,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="181" y="406"/>
+            <point key="canvasLocation" x="152" y="400"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ey5-n5-rTM">
